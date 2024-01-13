@@ -1,0 +1,14 @@
+{
+  "name": "wat-fib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p build && wat2wasm src/wat-fib.wat -o build/wat-fib.wasm",
+    "compare": "ls -l ../wat-fib/*.wasm ../as-fib/build/*.wasm",
+    "test": "node tests"
+  },
+  "author": "",
+  "license": "MIT",
+  "type": "module"
+}

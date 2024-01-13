@@ -1,0 +1,27 @@
+{
+  "name": "as-fib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "start": "npx serve .",
+    "test": "node tests",
+    "benchmark": "node benchmarks"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "assemblyscript": "^0.27.22",
+    "benchmark": "^2.1.4"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/as-fib.js",
+      "types": "./build/as-fib.d.ts"
+    }
+  }
+}
