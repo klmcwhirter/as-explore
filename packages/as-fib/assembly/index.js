@@ -1,4 +1,5 @@
-export const fibonacciJs = (num) => {
+
+export function fibonacciJs(num) {
     // set initial values
     var fibn = 0;
     var fibn1 = 1;

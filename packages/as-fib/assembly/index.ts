@@ -1,11 +1,11 @@
 // The entry file of your WebAssembly module.
 
-export function fibonacci(num: i32): i32 {
+export function fibonacciAs(num: i32): i32 {
   // set initial values
-  var fibn: i32 = 0;
-  var fibn1: i32 = 1;
-  var fibn2: i32 = 0;
-  var n: i32 = num;
+  let fibn: i32 = 0;
+  let fibn1: i32 = 1;
+  let fibn2: i32 = 0;
+  let n: i32 = num;
 
   // loop ... while n > 0
   while (n > 0) {
@@ -18,8 +18,8 @@ export function fibonacci(num: i32): i32 {
   return fibn;
 }
 
-export function fib_recurse(num: i32): i32 {
+export function fibRecurseAs(num: i32): i32 {
   if (num <= 1) return num;
 
-  return fib_recurse(num - 1) + fib_recurse(num - 2);
+  return fibRecurseAs(num - 1) + fibRecurseAs(num - 2);
 }

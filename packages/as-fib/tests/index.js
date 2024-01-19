@@ -1,6 +1,6 @@
 import assert from "assert";
-import { fibonacci, fib_recurse } from "../build/as-fib.debug.js";
-import { fibonacciJs, fibRecurseJs } from "../benchmarks/fib_lib.js";
+import { fibonacciAs, fibRecurseAs } from "../build/as-fib.debug.js";
+import { fibonacciJs, fibRecurseJs } from "../assembly/index.js";
 
 function test_fibonacci(fib) {
     assert.strictEqual(fib(0), 0);
@@ -15,11 +15,11 @@ function test_fibonacci(fib) {
     assert.strictEqual(fib(42), 267914296);
 }
 
-console.log('fibonacci:');
-test_fibonacci(fibonacci);
+console.log('fibonacciAs:');
+test_fibonacci(fibonacciAs);
 
-console.log('fib_recurse:');
-test_fibonacci(fib_recurse);
+console.log('fibRecurseAs:');
+test_fibonacci(fibRecurseAs);
 
 console.log('fibonacciJs:');
 test_fibonacci(fibonacciJs);

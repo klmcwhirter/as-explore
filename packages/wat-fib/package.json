@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "mkdir -p build && wat2wasm src/wat-fib.wat -o build/wat-fib.wasm",
-    "compare": "ls -l ../wat-fib/*.wasm ../as-fib/build/*.wasm",
+    "compare": "ls -l ../wat-fib/build/*.wasm ../as-fib/build/*.wasm",
     "test": "node tests"
   },
   "author": "",

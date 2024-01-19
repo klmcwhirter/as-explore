@@ -73,7 +73,6 @@
         call $fib_recurse
 
         i32.add
-        return
     )
     (export "fib_recurse" (func $fib_recurse))
 )

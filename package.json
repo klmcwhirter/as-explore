@@ -1,0 +1,19 @@
+{
+  "name": "as-explore",
+  "version": "1.0.0",
+  "description": "AssemblyScript exploratory projects",
+  "scripts": {
+    "clean": "find . -type d \\( -name node_modules -o -name build \\) -exec rm -fr {} \\; || true",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "benchmark": "pnpm --filter as-fib benchmark",
+    "compare": "pnpm --filter wat-fib compare"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=8"
+  }
+}

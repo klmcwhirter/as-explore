@@ -6,8 +6,9 @@
   "scripts": {
     "asbuild:debug": "asc assembly/index.ts --target debug",
     "asbuild:release": "asc assembly/index.ts --target release",
-    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
-    "start": "npx serve .",
+    "asbuild": "pnpm run asbuild:debug && pnpm run asbuild:release",
+    "build": "pnpm run asbuild",
+    "start": "pnpx serve .",
     "test": "node tests",
     "benchmark": "node benchmarks"
   },

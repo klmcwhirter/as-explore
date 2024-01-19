@@ -1,7 +1,7 @@
 import Benchmark from "benchmark";
 
-import { fibonacci, fib_recurse } from "../build/as-fib.js";
-import { fibonacciJs, fibRecurseJs } from "./fib_lib.js";
+import { fibonacciAs, fibRecurseAs } from "../build/as-fib.release.js";
+import { fibonacciJs, fibRecurseJs } from "../assembly/index.js";
 
 function runSuite(suite) {
     console.info("Running", suite.name);
@@ -17,8 +17,6 @@ function runSuite(suite) {
 }
 
 function fibonacciSuites() {
-    const fibonacciAs = fibonacci;
-
     const fibonacci_3 = Benchmark.Suite("fibonacci_3");
     fibonacci_3
         .add("AssemblyScript", () => fibonacciAs(3))
@@ -33,8 +31,6 @@ function fibonacciSuites() {
 }
 
 function fibRecurseSuites() {
-    const fibRecurseAs = fib_recurse;
-
     const fibRecurse_3 = Benchmark.Suite("fibRecurse_3");
     fibRecurse_3
         .add("AssemblyScript", () => fibRecurseAs(3))
