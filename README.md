@@ -5,10 +5,9 @@ AssemblyScript exploratory projects
 
 Project|Description
 -------|-----------
-apps/as-fib|Implementation of a fibonacci algorithm using AssemblyScript
-apps/wat-fib|Same as as-fib but hand coded wat - see [CODING FIBONACCI IN WEBASSEMBLY BY HAND](https://www.youtube.com/watch?v=zRfAZihtLus)
-apps/as-types|Shows unboxing `record` types for `enum` and `class`
-packages/fib-common|Contains common code used in fibonacci tests and benchmarks
+as-fib|Implementation of a fibonacci algorithm using AssemblyScript
+wat-fib|Same as as-fib but hand coded wat - see [CODING FIBONACCI IN WEBASSEMBLY BY HAND](https://www.youtube.com/watch?v=zRfAZihtLus)
+as-types|Shows unboxing `record` types for `enum` and `class`
 
 ### Execute tests
 At the repo root run these commands to execute the tests.

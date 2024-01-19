@@ -1,20 +1,25 @@
 (module
-    (func $fibonacci (param $num i32) (result i32)
+    (func $fibonacciAs (param $num i32) (result i32)
         (local $fibn i32)
         (local $fibn1 i32)
         (local $fibn2 i32)
         (local $n i32)
 
         ;; set initial values
+
+        ;; let fibn: i32 = 0;
         i32.const 0
         local.set $fibn
 
+        ;; let fibn1: i32 = 1;
         i32.const 1
         local.set $fibn1
 
+        ;; let fibn2: i32 = 0;
         i32.const 0
         local.set $fibn2
 
+        ;; let n: i32 = num;
         local.get $num
         local.set $n
 
@@ -49,11 +54,13 @@
             end
         end
 
+        ;; return fibn;
         local.get $fibn
     )
-    (export "fibonacci" (func $fibonacci))
+    (export "fibonacciAs" (func $fibonacciAs))
 
-    (func $fib_recurse (param $num i32) (result i32)
+    (func $fibRecurseAs (param $num i32) (result i32)
+        ;; if (num <= 1) return num;
         local.get $num
         i32.const 1
         i32.le_s
@@ -62,17 +69,18 @@
             return
         end
 
+        ;; return fibRecurseAs(num - 1) + fibRecurseAs(num - 2);
         local.get $num
         i32.const 1
         i32.sub
-        call $fib_recurse
+        call $fibRecurseAs
 
         local.get $num
         i32.const 2
         i32.sub
-        call $fib_recurse
+        call $fibRecurseAs
 
         i32.add
     )
-    (export "fib_recurse" (func $fib_recurse))
+    (export "fibRecurseAs" (func $fibRecurseAs))
 )

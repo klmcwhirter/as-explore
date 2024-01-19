@@ -3,8 +3,8 @@ async function instantiate(module, imports = {}) {
   return exports;
 }
 export const {
-  fibonacci,
-  fib_recurse
+  fibonacciAs,
+  fibRecurseAs
 } = await (async url => instantiate(
   await (async () => {
     try { return await globalThis.WebAssembly.compileStreaming(globalThis.fetch(url)); }
